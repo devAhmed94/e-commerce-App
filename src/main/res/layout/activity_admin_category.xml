@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+     >
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminCategoryActivity">
+    <TextView
+        android:id="@+id/ad_category_tv_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_product"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/ad_category_linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@+id/ad_category_tv_add"
+        android:layout_marginTop="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/ad_category_iv_tshirts"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:src="@drawable/tshirts"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_sports"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sports"
+            />
+
+        <ImageView
+            android:id="@+id/ad_category_iv_dress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/female_dresses"
+            />
+
+        <ImageView
+            android:id="@+id/ad_category_iv_sweather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sweather"
+            />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ad_category_linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@+id/ad_category_linear1"
+        android:layout_marginTop="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/ad_category_iv_glasses"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:src="@drawable/glasses"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_purses_bags"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/purses_bags"
+
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_hats"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:src="@drawable/hats"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_shoess"
+            android:layout_width="80dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:src="@drawable/shoess"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ad_category_linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@+id/ad_category_linear2"
+        android:layout_marginTop="50dp"
+        >
+
+        <ImageView
+            android:id="@+id/ad_category_iv_headphoness"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/headphoness"
+            android:layout_marginStart="10dp"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_laptops"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/laptops"
+            android:layout_marginStart="10dp"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_watches"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:src="@drawable/watches"
+            android:layout_marginStart="10dp"
+            />
+        <ImageView
+            android:id="@+id/ad_category_iv_mobiles"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mobiles"
+            android:layout_marginStart="10dp"
+
+            />
+
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/ad_category_btn_maintain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Maintain"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/ad_category_linear3"
+        android:layout_marginTop="40dp"
+
+        />
+    <Button
+        android:id="@+id/ad_category_btn_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_shape"
+        android:textAllCaps="false"
+        android:text="@string/check_new_orders"
+        android:textColor="@color/white"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/ad_category_btn_maintain"
+
+        />
+
+    <Button
+        android:id="@+id/ad_category_btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_shape"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/ad_category_btn_check"
+        android:layout_marginTop="10dp"
+
+        />
+
+
+
+
+</RelativeLayout>
+</ScrollView>

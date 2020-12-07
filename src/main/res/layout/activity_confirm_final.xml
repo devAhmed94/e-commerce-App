@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfirmFinalActivity">
+    <TextView
+        android:id="@+id/confirm_tv_write"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_write_your_shipment_details"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <EditText
+        android:id="@+id/confirm_et_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_name"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_below="@+id/confirm_tv_write"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:id="@+id/confirm_et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_phone_number"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/confirm_et_name"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:id="@+id/confirm_et_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_home_address"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/confirm_et_phone"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+    <EditText
+        android:id="@+id/confirm_et_cityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/your_city_name"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/confirm_et_address"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+
+    <Button
+        android:id="@+id/confirm_btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/confirm"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_marginBottom="40dp"
+        android:layout_marginHorizontal="20dp"
+        />
+
+</RelativeLayout>

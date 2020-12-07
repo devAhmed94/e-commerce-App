@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register"
+    tools:context=".RegisterActivity">
+    <ImageView
+        android:id="@+id/register_applogo_iv"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:src="@drawable/applogo"
+        />
+    <EditText
+        android:id="@+id/register_name_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_applogo_iv"
+        android:textAllCaps="false"
+        android:hint="@string/enter_your_name"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/input_shape"
+        android:layout_marginHorizontal="20dp"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/register_phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_name_et"
+        android:textAllCaps="false"
+        android:hint="@string/enter_your_phone"
+        android:inputType="phone"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/input_shape"
+        android:layout_marginHorizontal="20dp"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <EditText
+        android:id="@+id/register_password_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_phone_et"
+        android:textAllCaps="false"
+        android:hint="@string/enter_your_password"
+        android:inputType="textPassword"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/input_shape"
+        android:layout_marginHorizontal="20dp"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/register_create_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAllCaps="false"
+        android:text="@string/create"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/btn_shape"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/register_password_et"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        />
+
+
+</RelativeLayout>

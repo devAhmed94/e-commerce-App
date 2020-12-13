@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.ecommerceapp.R;
+import com.example.ecommerceapp.sellers.SellerCategoryActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -62,7 +63,7 @@ public class AdminMaintainActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if(task.isSuccessful()){
                             Toast.makeText(AdminMaintainActivity.this," deleted " ,Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(AdminMaintainActivity.this, AdminCategoryActivity.class);
+                            Intent intent = new Intent(AdminMaintainActivity.this, SellerCategoryActivity.class);
                             startActivity(intent);
 
                         }
@@ -97,7 +98,7 @@ public class AdminMaintainActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
 
                         Toast.makeText(AdminMaintainActivity.this," update successful" ,Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(AdminMaintainActivity.this,AdminCategoryActivity.class);
+                        Intent intent = new Intent(AdminMaintainActivity.this, SellerCategoryActivity.class);
                         startActivity(intent);
                         finish();
                     }

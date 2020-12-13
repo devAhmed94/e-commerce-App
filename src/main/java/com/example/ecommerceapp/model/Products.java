@@ -1,12 +1,12 @@
 package com.example.ecommerceapp.model;
 
 public class Products {
-  private String pid,currentTime ,currentDate ,name ,description ,price ,image ,category;
+  private String pid,currentTime ,currentDate ,name ,description ,price ,image ,category,productState;
 
     public Products() {
     }
 
-    public Products(String pid, String currentTime, String currentDate, String name, String description, String price, String image, String category) {
+    public Products(String pid, String currentTime, String currentDate, String name, String description, String price, String image, String category, String productState) {
         this.pid = pid;
         this.currentTime = currentTime;
         this.currentDate = currentDate;
@@ -15,6 +15,7 @@ public class Products {
         this.price = price;
         this.image = image;
         this.category = category;
+        this.productState = productState;
     }
 
     public String getPid() {
@@ -79,5 +80,13 @@ public class Products {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public String getProductState() {
+        return productState;
+    }
+
+    public void setProductState(String productState) {
+        this.productState = productState;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Prevalent;
 import com.example.ecommerceapp.model.Products;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -52,8 +52,8 @@ public class DetailsActivity extends AppCompatActivity {
         btn_addToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(orderState.equals("order placed") ||orderState.equals("order shipped")){
-                    Toast.makeText(DetailsActivity.this," the order will be place soon ",Toast.LENGTH_LONG).show();
+                if(orderState.equals("order placed") || orderState.equals("order Shipped")){
+                    Toast.makeText(DetailsActivity.this," you can add purchase more products, once your order is shipped or confirmed. ",Toast.LENGTH_LONG).show();
 
                 }else {
                     onAddToCart();
@@ -100,7 +100,7 @@ public class DetailsActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
                                         Toast.makeText(DetailsActivity.this,"added this product to list cart",Toast.LENGTH_LONG).show();
-                                        startActivity(new Intent(DetailsActivity.this,HomeActivity.class));
+                                        startActivity(new Intent(DetailsActivity.this, HomeActivity.class));
                                     }
                                 }
                             });
@@ -143,15 +143,14 @@ public class DetailsActivity extends AppCompatActivity {
             {
                 if(snapshot.exists()){
                     String shippedState = snapshot.child("state").getValue().toString();
-                    String userName = snapshot.child("name").getValue().toString();
 
-                    if(shippedState.equals("shipment"))
+                    if(shippedState.equals("shipped"))
                     {
-                      orderState ="order placed";
+                      orderState ="order shipped";
                     }
-                    else if(shippedState.equals("not shipment"))
+                    else if(shippedState.equals("not shipped"))
                     {
-                        orderState ="order shipped";
+                        orderState ="order placed";
 
                     }
 

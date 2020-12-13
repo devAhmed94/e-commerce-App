@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ecommerceapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -84,11 +85,11 @@ public class RegisterActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 progressDialog.dismiss();
                                 Toast.makeText(RegisterActivity.this, " Congratulation, Account is created", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                                startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
                             }else {
                                 progressDialog.dismiss();
                                 Toast.makeText(RegisterActivity.this, " Network error", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(RegisterActivity.this,MainActivity.class));
+                                startActivity(new Intent(RegisterActivity.this, MainActivity.class));
                             }
                         }
                     });

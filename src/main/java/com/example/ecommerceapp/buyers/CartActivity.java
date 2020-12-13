@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Cart;
 import com.example.ecommerceapp.model.CartViewHolder;
 import com.example.ecommerceapp.model.Prevalent;
@@ -50,7 +51,7 @@ public class CartActivity extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CartActivity.this,ConfirmFinalActivity.class);
+                Intent intent = new Intent(CartActivity.this, ConfirmFinalActivity.class);
                 intent.putExtra("total price", String.valueOf(totalPrice));
                 startActivity(intent);
             }
@@ -96,7 +97,7 @@ public class CartActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 if(which==0){
-                                    Intent intent =new Intent(CartActivity.this,DetailsActivity.class);
+                                    Intent intent =new Intent(CartActivity.this, DetailsActivity.class);
                                     intent.putExtra("pid", model.getPid());
                                     startActivity(intent);
                                 }
@@ -107,7 +108,7 @@ public class CartActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
                                                 Toast.makeText(CartActivity.this,"remove successful",Toast.LENGTH_LONG).show();
-                                                startActivity(new Intent(CartActivity.this,HomeActivity.class));
+                                                startActivity(new Intent(CartActivity.this, HomeActivity.class));
                                             }
                                         }
                                     });
@@ -139,23 +140,23 @@ public class CartActivity extends AppCompatActivity {
                    String shippedState = snapshot.child("state").getValue().toString();
                    String userName = snapshot.child("name").getValue().toString();
 
-                   if(shippedState.equals("shipment"))
+                   if(shippedState.equals("shipped"))
                    {
-                       tv_totalPrice.setText("Dear " + userName+" /n Congratulation , the shipment is successfully ");
+                       tv_totalPrice.setText("Dear " + userName+" \n Congratulation , the shipment is successfully ");
                        cartListRecycle.setVisibility(View.GONE);
                        msg.setVisibility(View.VISIBLE);
-                       msg.setText("congratulation , your order is shipped successful soon, " +
-                               " we will send your order front your door ");
+                       msg.setText("Congratulations, your final order has been Shipped successfully." +
+                               " Soon you will received your order at your door step.");
                        btn_next.setVisibility(View.GONE);
-                       Toast.makeText(CartActivity.this," you can purchase more products",Toast.LENGTH_LONG).show();
+                       Toast.makeText(CartActivity.this," you can purchase more products, once you received your first final order.",Toast.LENGTH_LONG).show();
                    }
-                   else if(shippedState.equals("not shipment"))
+                   else if(shippedState.equals("not shipped"))
                    {
                        tv_totalPrice.setText("state ship = not shipment");
                        cartListRecycle.setVisibility(View.GONE);
                        msg.setVisibility(View.VISIBLE);
                        btn_next.setVisibility(View.GONE);
-                       Toast.makeText(CartActivity.this," you can purchase more products",Toast.LENGTH_LONG).show();
+                       Toast.makeText(CartActivity.this," you can purchase more products, once you received your first final order.",Toast.LENGTH_LONG).show();
 
                    }
 

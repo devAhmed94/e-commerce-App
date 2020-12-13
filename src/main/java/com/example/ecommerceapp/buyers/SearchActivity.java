@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Products;
 import com.example.ecommerceapp.model.RecycleViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -74,7 +75,7 @@ public class SearchActivity extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(SearchActivity.this,DetailsActivity.class);
+                        Intent intent = new Intent(SearchActivity.this, DetailsActivity.class);
                         intent.putExtra("pid", model.getPid());
                         startActivity(intent);
                     }

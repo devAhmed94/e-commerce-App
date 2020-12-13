@@ -7,7 +7,7 @@
     <string name="enter_your_password">Enter your password</string>
     <string name="remember_me">Remember me</string>
     <string name="forget_password">Forget password?</string>
-    <string name="login" translatable="false">Login</string>
+    <string name="login">Login</string>
     <string name="login_admins">Login Admins</string>
     <string name="i_m_an_admin">I am an admin</string>
     <string name="i_am_not_admin">I am not admin</string>
@@ -46,4 +46,19 @@
     <string name="where_your_parent_met_first_time">Where your parent met first time ?</string>
     <string name="whats_your_favourite_super_hero">whats your favourite super hero ?</string>
     <string name="verify">Verify</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="shop_bussiness_address">Shop-Bussiness Address</string>
+    <string name="already_have_an_account">Already Have An Account ?</string>
+    <string name="register">Register</string>
+    <string name="seller_login_form">Seller Login Form</string>
+    <string name="seller_registration_form">Seller Registration Form</string>
+    <string name="maintain">Maintain</string>
+    <string name="welcome_dear_admin">Welcome Dear Admin</string>
+    <string name="check_and_approve_new_orders">Check and Approve new Orders</string>
+    <string name="approve_new_products">Approve New Products</string>
+    <string name="my_all_products">My All products</string>
+
 </resources>

@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ecommerceapp.admin.AdminCategoryActivity;
+import com.example.ecommerceapp.R;
+import com.example.ecommerceapp.admin.AdminHomeActivity;
+import com.example.ecommerceapp.sellers.SellerCategoryActivity;
 import com.example.ecommerceapp.model.Prevalent;
 import com.example.ecommerceapp.model.Users;
 import com.google.firebase.database.DataSnapshot;
@@ -74,7 +76,7 @@ public class LoginActivity extends AppCompatActivity {
         tv_forget_password.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,ResetPasswordActivity.class);
+                Intent intent = new Intent(LoginActivity.this, ResetPasswordActivity.class);
                 intent.putExtra("check","login");
                 startActivity(intent);
             }
@@ -119,13 +121,13 @@ public class LoginActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
 
                                 Toast.makeText(LoginActivity.this, "successful login admin", Toast.LENGTH_LONG).show();
-                                startActivity(new Intent(LoginActivity.this, AdminCategoryActivity.class));
+                                startActivity(new Intent(LoginActivity.this, AdminHomeActivity.class));
 
                             }else if(parentDBRoot.equals("Users")){
                                 progressDialog.dismiss();
                                 Toast.makeText(LoginActivity.this, "successful login user", Toast.LENGTH_LONG).show();
                                 Prevalent.onlineUser = user;
-                                startActivity(new Intent(LoginActivity.this,HomeActivity.class));
+                                startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                             }
 
                         }else{

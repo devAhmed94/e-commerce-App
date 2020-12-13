@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,12 +12,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Prevalent;
-import com.example.ecommerceapp.model.Users;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -92,7 +91,7 @@ public class SettingActivity extends AppCompatActivity {
         btn_setSecurity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SettingActivity.this,ResetPasswordActivity.class);
+                Intent intent = new Intent(SettingActivity.this, ResetPasswordActivity.class);
                 intent.putExtra("check","setting");
                 startActivity(intent);
             }
@@ -109,7 +108,7 @@ public class SettingActivity extends AppCompatActivity {
         userMap.put("phone", et_phone.getText().toString());
         dataref.child(Prevalent.onlineUser.getPhone()).updateChildren(userMap);
 
-        startActivity(new Intent(SettingActivity.this,HomeActivity.class));
+        startActivity(new Intent(SettingActivity.this, HomeActivity.class));
         Toast.makeText(SettingActivity.this,"update successful",Toast.LENGTH_LONG).show();
         finish();
 

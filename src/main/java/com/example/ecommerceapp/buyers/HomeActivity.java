@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.admin.AdminMaintainActivity;
 import com.example.ecommerceapp.model.Prevalent;
 import com.example.ecommerceapp.model.Products;
@@ -128,7 +129,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onStart();
 
         FirebaseRecyclerOptions<Products> options =new FirebaseRecyclerOptions.Builder<Products>()
-                .setQuery(databaseReference, Products.class)
+                .setQuery(databaseReference.orderByChild("productState").equalTo("approved"), Products.class)
                 .build();
 
         FirebaseRecyclerAdapter<Products,RecycleViewHolder> adapter = new FirebaseRecyclerAdapter<Products,RecycleViewHolder> (options) {
@@ -150,7 +151,7 @@ public class HomeActivity extends AppCompatActivity {
 
                         if(admin.equals("")){
 
-                            Intent intent = new Intent(HomeActivity.this,DetailsActivity.class);
+                            Intent intent = new Intent(HomeActivity.this, DetailsActivity.class);
                             intent.putExtra("pid", model.getPid());
                             startActivity(intent);
 

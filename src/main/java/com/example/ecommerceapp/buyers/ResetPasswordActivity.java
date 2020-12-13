@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -122,7 +123,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                                             if (task.isSuccessful()){
                                                                 Toast.makeText(ResetPasswordActivity.this, "Password changed successfully", Toast.LENGTH_SHORT).show();
                                                                 dialog.dismiss();
-                                                                startActivity(new Intent(ResetPasswordActivity.this,LoginActivity.class));
+                                                                startActivity(new Intent(ResetPasswordActivity.this, LoginActivity.class));
 
                                                             }
                                                         }

@@ -13,4 +13,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="RippleStyle">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">#ffff</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
+    <style name="RippleStyleTwo">
+        <item name="mrl_rippleOverlay">true</item>
+        <item name="mrl_rippleColor">@android:color/holo_green_dark</item>
+        <item name="mrl_rippleAlpha">0.2</item>
+    </style>
 </resources>

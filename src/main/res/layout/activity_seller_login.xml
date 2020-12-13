@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sellers.SellerLoginActivity"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/sellerlogin"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/seller_login_form"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/holo_green_dark"
+        android:textStyle="bold"
+        android:paddingVertical="10dp"
+        />
+    <EditText
+        android:id="@+id/seller_login_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="text"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <EditText
+        android:id="@+id/seller_login_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="textPassword"
+        android:paddingVertical="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+
+        >
+        <com.balysv.materialripple.MaterialRippleLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/RippleStyle"
+            >
+            <Button
+                android:id="@+id/seller_login_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_green_dark"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                />
+        </com.balysv.materialripple.MaterialRippleLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

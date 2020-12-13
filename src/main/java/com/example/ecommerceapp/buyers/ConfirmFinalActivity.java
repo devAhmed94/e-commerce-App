@@ -1,4 +1,4 @@
-package com.example.ecommerceapp;
+package com.example.ecommerceapp.buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.ecommerceapp.R;
 import com.example.ecommerceapp.model.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -86,7 +87,7 @@ public class ConfirmFinalActivity extends AppCompatActivity {
         map.put("cityName", et_cityName.getText().toString());
         map.put("date", saveCurrentDate);
         map.put("time", saveCurrentTime);
-        map.put("state", "not shipment");
+        map.put("state", "not shipped");
         conRef.updateChildren(map).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -99,7 +100,7 @@ public class ConfirmFinalActivity extends AppCompatActivity {
                             if(task.isSuccessful()){
 
                                 Toast.makeText(ConfirmFinalActivity.this, " confirmed successful ",Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(ConfirmFinalActivity.this,HomeActivity.class);
+                                Intent intent = new Intent(ConfirmFinalActivity.this, HomeActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             }
